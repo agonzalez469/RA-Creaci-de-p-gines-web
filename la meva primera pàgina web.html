@@ -1,38 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8"/><!-- Indica el tipo d'alfabet -->
+	<meta charset="utf-8"/><!-- Indica el tipo d'alfabet, codifiació dels caràcters -->
 	<title>La meva primera pàgina web.</title>
+	<link rel="stylesheet" href="Sessio.css"><!--etiqueta que serveix per indicar al document html quin arxiu extern de .css volem que utilitzi. Han d'estar els dos fitxers guardats a la mateixa carpeta.-->
 	<style>
-		header {
-			background: blue
-		}
-		nav {
-			background: magenta
-		}
-		footer {
-			background: orange
-		}
-		aside {
-			background: purple
-		}
-		body {
-			background: grey
-		}
-		.a1 {
-			font-weight: bold;
-		}
-		.article1 {
-			background: skyblue
-		}
-		.article2 {
-			background: yellow
-		}
-
-
 	</style><!--Etiqueta que agrupa els estils, també es pot indicar a cada apartat que tenen preferència, però aquí és més fàcil de veure i canviar -->
 </head><!-- fa referència al títul de la pestanya -->
 <body>
+	<div>
 <header>
 	<h1>Mi blog</h1><!-- indica el tamany de la lletra, de l'1 al 7, de gran a petit -->
 </header><!-- encapçalament de la pàgina -->
@@ -45,7 +21,7 @@
 </nav><!--navegador de la pàgina -->
 <section>
 	<article class="article1">
-		<h1 style="background: pink">Títol del primer article</h1>
+		<h1>Títol del primer article</h1>
 		<time datetime="02-01-2020">Publicat el 2 d'octubre de 2020</time>
 		<p class="a1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -64,10 +40,10 @@
 </aside><!-- contingut en un lateral de la pàgina -->
 <footer>
 	<p>Drets reservats</p>
-	<a href="http://www.google.com" style="background: red">Visita la web</a>
+	<a href="http://www.google.com">Visita la web</a>
 	<p>Mida de text <small>diferent</small> fins aquí</p>
-	<strong style="background: green">negreta</strong>
+	<strong>negreta</strong>
 </footer><!-- peu que es pot col·locar a diferents llocs de la pàgina -->
-
+</div>
 </body><!-- comprén tot el contingut -->
 </html>

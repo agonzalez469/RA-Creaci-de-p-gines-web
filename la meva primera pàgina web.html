@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/><!-- Indica el tipo d'alfabet -->
+	<title>La meva primera pàgina web.</title>
+	<style>
+		header {
+			background: blue
+		}
+		nav {
+			background: magenta
+		}
+		footer {
+			background: orange
+		}
+		aside {
+			background: purple
+		}
+		body {
+			background: grey
+		}
+		.a1 {
+			font-weight: bold;
+		}
+		.article1 {
+			background: skyblue
+		}
+		.article2 {
+			background: yellow
+		}
+
+
+	</style><!--Etiqueta que agrupa els estils, també es pot indicar a cada apartat que tenen preferència, però aquí és més fàcil de veure i canviar -->
+</head><!-- fa referència al títul de la pestanya -->
+<body>
+<header>
+	<h1>Mi blog</h1><!-- indica el tamany de la lletra, de l'1 al 7, de gran a petit -->
+</header><!-- encapçalament de la pàgina -->
+<nav>
+	<ul>
+		<li>Principal</li>
+		<li>Ajuda</li>
+		<li>Contacte</li>
+	</ul>
+</nav><!--navegador de la pàgina -->
+<section>
+	<article class="article1">
+		<h1 style="background: pink">Títol del primer article</h1>
+		<time datetime="02-01-2020">Publicat el 2 d'octubre de 2020</time>
+		<p class="a1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><!-- la p indica paràgraf, class serveix per donar un nom al paràgraf i poder donar el mateix estil als paràgrafs que tenen el mateix nom. L'estil se li donarà amb l'estiqueta style a la part de dalt i en aquest cas s'indica així: .i el nom -->
+	</article>
+	<article class="article2">
+		<h1>Títol del segon article</h1>
+	</article>
+</section>
+<aside>
+	<blockquote>Archivo</blockquote>
+	<p class="a1">Acerca de</p>
+</aside><!-- contingut en un lateral de la pàgina -->
+<footer>
+	<p>Drets reservats</p>
+	<a href="http://www.google.com" style="background: red">Visita la web</a>
+	<p>Mida de text <small>diferent</small> fins aquí</p>
+	<strong style="background: green">negreta</strong>
+</footer><!-- peu que es pot col·locar a diferents llocs de la pàgina -->
+
+</body><!-- comprén tot el contingut -->
+</html>

@@ -1,0 +1,68 @@
+h1 {
+	font-size: 30px;/*tamany de la lletra*/
+	font-weight: bold;/*gruix de la lletra*/
+	font-family: sans-serif;/*tipus de lletra*/
+	background: pink;/*color de fons*/
+}
+header {
+	color: blue;
+}
+nav li{
+	color: blue;
+	padding: 5px;
+	display: inline-block;/*disposar el contingut en línia*/
+	border: 2px solid yellow;
+	background: silver;
+}
+
+footer {
+	clear: both;/*reordena dins de l'html els elements que floten fora del fitxer*/
+	background: silver;
+	color: white;
+}
+aside {
+	color: white;
+	float: left;/*fa que els elements flotin fora de l'arxiu html*/
+	width: 10%;
+
+}
+body {
+	font-size: 20px;
+	text-align: center;
+}
+div {
+	background: lightblue;
+	margin: 15px auto;
+	width: 100%;
+	padding: 20px;/*marge que hi ha del borde de la pàgina cap endins*/
+}
+.a1 {
+	font-weight: bold;
+}
+.article1 {
+	color: yellow;/*color de la lletra*/
+	width: 60%;/*amplada en aquest cas de l'article*/
+	margin: auto;/*marges de l'article en aquest cas*/
+	background: silver;
+	float: left;
+	border: none;
+}
+.article2 {
+	color: green;
+	text-align: right;/*alineació del text*/
+	width: 60%;
+	margin: auto;
+	float: left;
+	border: none;
+}
+strong {
+	background: greenyellow;
+}
+a {
+	background: red;
+}
+header, section, nav, footer, aside, article {
+	border: 1px solid black;/*tamany i color del borde de la pàgina o articles*/
+	display: block;/*disposició de l'estructura en bloc*/
+	padding: 16px;
+}

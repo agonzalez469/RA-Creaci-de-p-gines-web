@@ -1,0 +1,79 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+header {
+	color: blue;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+nav li {
+	padding: 5px;
+	display: inline-block;
+	border: 2px solid yellow;
+	color: blue;
+	background: pink;
+	text-align: center;
+}
+nav {
+	margin-bottom: 10px;
+	text-align: center;
+}
+body {
+	background: #D6EAF8;
+	display: block;
+	padding: 30px;
+	margin: 50px;
+}
+.t1, .t2 {
+	background: pink;
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.art1, .art2 {
+	border: 1px solid black;
+	text-align: center;
+	background: silver;
+}
+.p1, .p2 {
+	color: yellow;
+	font-family: times new roman; 
+}
+section {
+	width: 50%;
+	float: left;
+}
+.art1, .art2 {
+	margin-bottom: 10px;
+	padding: 15px;
+}
+aside {
+	float: left;
+	width: 20%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 15px;
+}
+footer {
+	clear: both;
+	background: silver;
+	text-align: center;
+}
+aside blockquote {
+	border: 1px dashed black;
+	padding: 20px;
+	background: pink;
+}
+img {
+	margin-bottom: 30px;
+}
+.bq1 {
+	margin-bottom: 5px;
+}
+.bq2 {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form action=""><!--introduir un formulari-->
+		<fieldset><!--encuadra tot el que hi ha dins de les etiquetes, crea un blog com si fos un "section"-->
+			<legend><i><b>Dades Personals</i></b></legend><!--"legend" crea un títol, la "i" vol dir cursiva, la "b" es negreta-->
+			<p>Nom: <input type="text" name="nom"></p>
+			<p>Cognoms: <input type="text" name="cognoms"></p>
+			<p>Codi Postal: <input type="text" name="codi_postal" size="4" maxlength="5" required pattern="[0-9]"></p><!--"maxlenght" serveix per dir el máxim de dígits que demanem, "required pattern" vol dir que es una informació obligatoria, "size" fa referencia al tamany del cuadre on s'ha d'escriu-re al informació-->
+			<p>Provincia: <input type="text" readonly name="provincia" value="Girona"></p><!--"value" serveix per escriu-re per defecte el que li indiquem, "readonly" vol dir que només és de lectura"-->
+			<p>e-mail: <input type="email" name="mail" required>
+				<input type="submit" value="OK"><!--"type submit" s'utilitza per afegir un botó que al apretar-lo envii la informació que es demana, en aquest cas l'email. Ho rebrem al nostre correu, on rebrem tota la informació de la comanda--><!--En aquest cas, "value" serveix per donar-li un nom al botó que creem per fer el submit-->
+			</p>
+			<p>Telèfon: <input type="tel" name="telèfon" maxlength="9"></p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Comanda</b></i></legend>
+			<p>Model: <input type="text" name="model"></p>
+			<input type="radio" name="talla" value="S"> S<br><!--"br" es un salt de línia, seria com un enter, sense la necesitat de l'etiqueta "p" se'ns col·loquen un sota l'altre--><!--l'etiqueta "value" en el "type radio" s'utilitza per donar-li un nom que nosaltres rebrem en el cas que es trii aquella opció.-->
+			<input type="radio" name="talla" value="M"> M<br><!--"radio" vol dir botons de selecció única, per triar una de les opcions-->
+			<input type="radio" name="talla" value="L"> L<br><!--"name" serveix per donar-li un nom i així agrupar les coses, de tal manera, que si donem diferents noms a les talles podrem seleccionar més d'una talla, per tant, com que només volem seleccionar una talla, totes han de tenir el mateix nom-->
+			<input type="radio" name="talla" value="XL" checked> XL<br><!--"checked" ens marca directament per defecte aquesta talla-->
+			<p>Quantitat: <input type="text" name="quantitat" size="3" value="1"></p><!--en aquest cas "value" ens indica que volem 1 com a quantitat predeterminada-->
+			<p>Triar el color: <input type="color"></p>
+			<p>Observacions:</p>
+			<textarea rows="4" cols="30"></textarea><!--"rows" son el número de línies del cuadre i "cols" seria la longitud-->
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Llista desplegable</b></i></legend>
+			<p>Quin navegador utilitzes?</p>
+			<select><!--"select"serveix per crear un llistat desplegable on s'incloen tots els "option value" amb el nom que indiquem entre >< en aquest cas, Internet Explorer..., amb l'opció de triar-ne una i que quedi encuadrada i les altres amagades-->
+				<option value="1">Internet Explorer</option>
+				<option value="2">Firefox</option>
+				<option value="3" selected>Google Chrome</option><!--"selected" serveis per indicar que volem aquesta opció com a determinada-->
+			</select>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Checkbox</b></i></legend>
+			<p>Serveis:
+				<input type="checkbox" name="erp"> ERP <!--"checkbox" té multiple selecció, per tant, a diferencia del "radio", encara que li canvien el nom o totes les opcions tinguin el mateix nom, podrem seleccionar més d'una opció-->
+				<input type="checkbox" name="crm"> CRM
+				<input type="checkbox" name="formació"> FORMACIÓ
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Datalist</b></i></legend>
+			<p>Tipus d'empresa: <input type="text" list="tipus_empresa">
+				<datalist id="tipus_empresa"><!--"datalist" sempre va lligat amb un "id" que ha de tenir el mateix nom que el "list", perquè asocii la llista amb les opcions.-->
+					<option value="SA"></option>
+					<option value="SL"></option>
+					<option value="SC"></option>
+				</datalist><!--"datalist" s'utilitza per crear un cuadre de text on al escriu-re una lletra s'obre un llistat d'opcions que comensin amb aquesta lletra o al clicar amb el ratolí se t'obre tot el llistat. Aquest llistat el formen les opcions que indiquem amb les etiquetes "option value"; "value" tindrà el nom que volem que es vegi a la llista.-->
+			</p>
+		</fieldset>
+	</form>
+</body> 
+</html>

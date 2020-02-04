@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taules</title>
+    <style>
+        table { /*Estil en bloc, que fa referència a totes les taules que creem, excepte si indiquem una clase*/
+                /*Té preferència l'estil en línia i després l'estil en bloc*/
+            border: 3px solid black;/*borde exterior*/
+            width: 250px;/*amplada de la taula*/
+            height: 250px; /*altura*/
+            border-collapse: collapse;/*serveix per ajuntar els bordes i que siguin d'una sola línia*/
+            margin-left: auto;/*Col·loca la taula amb el màxim marge a l'esquerra, per tant, la taula queda a la dreta*/
+            margin-right: auto;/*Col·loca la taula amb el màxim marge a la dreta, per tant, la taula queda a l'esquerra*/
+            /*Aquests dos margin junt, fan que la taula quedi alineada al mig de la pàgina*/
+            text-align: center;/*Alineació horitzontal, de dreta a esquera, en aquest cas col·loca el text de la taula al centre*/
+        }
+        td {
+            border: 1px solid black;/*borde interior*/
+            vertical-align: top;/*Alineació vertical, col·loca el text de dalt a baix, en aquest cas a dalt*/
+            padding: 15px;
+        }
+        .color {
+            background-color: #99ccff;
+        }
+        colgroup {
+            background-color: #99ccff;
+            text-align: center;
+        }
+        #columnes {
+            background-color: yellowgreen;
+            text-align: center;
+        }
+        thead {
+            background-color: aquamarine;
+            font-size: 26px;
+        }
+        tfoot {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><!--Fa referència a les files de la taula-->
+            <td>1</td><!--Fa referència a les columnes de la taula-->
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td><td>4</td>
+        </tr>
+    </table>
+<br>
+<!--Alineació horitzontal-->
+    <table>
+        <tr>
+            <td style="text-align: left;">Producte 1</td>
+            <td style="text-align: center;">En Stock</td>
+            <td style="text-align: right;">3,43€</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Producte 2</td>
+            <td style="text-align: center;">Pendent</td>
+            <td style="text-align: right;">6,72€</td>
+        </tr>
+    </table>
+    <br>
+    <!--Alineació vertical-->
+    <table>
+        <tr>
+            <td class="color" style="width: 10%;">1</td>
+            <td>xxxxxx xxxxx xxxxxxx xxxxxx</td>
+        </tr>
+        <tr>
+            <td style="width: 10%;">2</td>
+            <td>xxxxxx xxxxx</td>
+        </tr>
+        <tr>
+            <td style="width: 10%;">3</td>
+            <td>xxxxxx xxxxx xxxxxxxx xxxxxx xxxxx xxxxxx</td>
+        </tr>
+    </table>
+    <br>
+    <!--Fusió de caselles FILES-->
+    <table>
+        <tr>
+            <td colspan="3" style="text-align: center;">Títol de la taula</td><!--"colspan" s'utilitza per ajuntar cel·les, se li indica el número de cel·les que volem unir-->
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <caption>Títol de la taula</caption><!--etiqueta per crear el títol de la taula, fora de la taula-->
+        <tr>
+            <th>Atribut</th><!--"th" serveix per posar en negreta normalment la primera fila de la taula-->
+            <th>Funció</th>
+        </tr>
+        <tr>
+            <td><i>colspan</i></td>
+            <td>Per fusionar columnes</td>
+        </tr>
+        <tr>
+            <td><i>rowspan</i></td>
+            <td>Per fusionar files</td>
+        </tr>
+    </table>
+    <br>
+    <!--Fusió de caselles COLUMNES-->
+    <table>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">Títol</td><!--"rowspan" serveix per unir caselles de columnes, el número que indiquem varia segons els número de caselles que volem agurpar.-->
+            <!--"vertical-align:middle" serveix per posar el text d'aquesta casella al centre i amb alineació vertical-->
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <br>
+    
+        <!--Una drecera per crear taules seria aquesta fòrmula: tr*5>td*3, els números varien segons les files i columnes que volem-->
+    
+        <!--Agrupar columnes-->
+    <table>
+        <colgroup span="1"></colgroup><!--"colgroup" grup de columnes. Serveix per dir-li quantes columnes volem agafar, en aquest cas 2, i poder donar-li un estil-->
+        <colgroup id="columnes" span="2"></colgroup><!--En aquest cas hem creat dos grups de columnes, per poder donar dos colors diferents-->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <br>
+    <!--Estructuració de la taula-->
+
+    <table>
+        <thead><!--etiqueta informa al navegador de que és l'encapçalament la taula-->
+            <tr>
+                <td colspan="2" style="text-align: center;">Fusió de caselles</td>
+            </tr>
+        </thead>
+        <tfoot><!--etiqueta que informa al navegador que això és el peu de la taula-->
+            <td colspan="2" style="text-align: center;">W3C Working Draft 24 Juny 2010</td>
+        </tfoot>
+        <tbody><!--etiqueta que informa al navegador que això és el cos de la taula-->
+            <tr>
+                <td><i>colspan</i></td>
+                <td>Per fusionar columnes</td>
+            </tr>
+            <tr>
+                <td><i>rowspan</i></td>
+                <td>Per fusionar files</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    
+</body>
+</html>

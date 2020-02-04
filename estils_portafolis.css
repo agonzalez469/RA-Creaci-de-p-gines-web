@@ -1,0 +1,57 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border: 3px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+table td {
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+img {
+    width: 250px;
+    height: 150px;
+}
+thead {
+    background-color:thistle;
+    font-size: 30px;
+    font-family: 'Lucida Sans';
+    color: black;
+}
+tfoot {
+    background-color: thistle;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    font-size: 15px;
+}
+.capçalera_taula, .peu_taula {
+    width: 100px;
+    height: 100px;
+}
+h1 {
+    background-color: thistle;
+    text-align: initial;
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 80px;
+}
+nav li {
+    display: inline-block;
+    border: 3px solid thistle;
+    font-size: 18px;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    padding: 5px;
+
+}
+nav {
+    text-align: center;
+    margin-top: 20px;
+}

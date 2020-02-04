@@ -2,10 +2,15 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Formularis</title>
+	<style>
+		span {
+			margin-left: 24px;
+		}
+	</style><!--Hem afegit al head l'style que fa referència a l'apartat de la Quantitat Solicitada, d'aquesta manera els números queden organitzats com volem-->
 </head>
 <body>
-	<form action=""><!--introduir un formulari-->
+	<form action=""><!--introduir un formulari i entre cometes indicarem on volem que s'envii la informació.-->
 		<fieldset><!--encuadra tot el que hi ha dins de les etiquetes, crea un blog com si fos un "section"-->
 			<legend><i><b>Dades Personals</i></b></legend><!--"legend" crea un títol, la "i" vol dir cursiva, la "b" es negreta-->
 			<p>Nom: <input type="text" name="nom"></p>
@@ -72,6 +77,32 @@
 			<legend><b><i>Motor de búsqueda</i></b></legend>
 			<p>Motor de búsqueda: <input type="search">
 				<input type="submit" value="GO"></p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Quantitat Solicitada</b></i></legend>
+			<script type="text/javascript">
+				function mostrar(seleccion) {
+					document.getElementById("valor").innerHTML=seleccion;
+				}
+			</script><!--En aquest cas hem afegit javascript perquè quan moguem el cursor de valor, ens digui quin valor hem escollit-->
+			<input name="cursor" type="range" min="1" max="5" value="3"
+			step="1" style="margin-top: 10px; width: 155px;" onchange="mostrar(this.value)"><br>
+			<div style="margin-top:-2px">
+				<span style="margin-left: 2px;">1</span><!--només aquesta opció porta un style concret perquè volem que tingui posició independenment dels altres números-->
+				<span>2</span><!--"span" serveix per tenir en línia el contingut-->
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+			</div>
+			<p>Ha escollit...<span id="valor">3</span></p><!--Aquí ens mostra, gràcies al javascript, el valor que hem escollit amb el cursor. Tot i que hem escrit un 3 perquè sigui el valor que mostri predeterminat-->
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><i><b>Login</b></i></legend>
+			<p>Introdueixi la seva contrasenya:</p>
+			<input type="password" minlength="8"><!--"password" s'utilitza per poder escriure una contrasenya, amb els números ocults-->
+			<input type="submit" value="OK">
 		</fieldset>
 	</form>
 </body> 
